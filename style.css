@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bpmf+Huninn&family=Funnel+Display:wght@300..800&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --case-color: rgb(158, 19, 228);
+    --case-hover-color: rgb(94, 20, 212);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Funnel Display';
+}
+
+body.dark {
+    --bg-color: #333;
+    --text-color: #f3f3f3;
+}
+
+main {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    font:inherit;
+}
+
+#grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: min(90vw, 400px);
+    height: min(90vw, 400px);
+    gap: 1em;
+}
+
+.casa {
+    background: var(--case-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    font-size: 4rem;
+    font-family: 'Bpmf Huninn';
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.casa:active{
+    transform:scale(0.95)
+}
+
+.casa:hover {
+    background-color: var(--case-hover-color);
+}
+
+.casa.x{
+    color: rgb(45, 255, 189);
+}
+
+.casa.o{
+    color: rgb(255, 231, 50);
+} 
+
+.gameInfo{
+    font-size: 1.5rem;
+}
+
+#darkModeButton {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background-color: #333;
+    background-image: url(full-moon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+body.dark #darkModeButton {
+    /*quando o body tiver a classe dark, o botão de dark mode muda para sol */
+    background-image: url(sun.png);
+    background-color: #f3f3f3;
+}  
+
+#reset{
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    font-size: 1.2rem;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+    background-color: var(--case-color);
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#reset:active{
+    transform: scale(0.95);
+}
+
+#reset:hover{
+    background-color: var(--case-hover-color);
+}
