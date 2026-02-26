@@ -19,3 +19,6 @@ Este projeto é o ápice, até então, das minhas habilidades em programação.
 - Verificação de vitória e empate
 - Sistema de Dark Mode
 - Reset do jogo sem recarregar a página
+
+Acesse aqui o meu jogo: https://vitorfikle.github.io/jogo-da-velha/
+Divirta-se C:
